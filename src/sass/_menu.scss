@@ -1,0 +1,42 @@
+.menu {
+  padding-top: 2%;
+  position: fixed;
+  z-index: 1;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $main-color;
+  &__title {
+    width: 25%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 2.2em;
+  }
+  &__list {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 1.5em;
+    &__item {
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+  &__socials {
+    font-size: 1.5em;
+    a {
+      display: block;
+      color: white;
+      transition: 0.5s;
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+}

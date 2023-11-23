@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+@import 'reset';
+@import 'variables';
+@import 'scrollbar';
+@import 'main';
+@import 'menu';
+@import 'welcome';
+img {
+  max-width: 50px;
+  max-height: 50px;
+}

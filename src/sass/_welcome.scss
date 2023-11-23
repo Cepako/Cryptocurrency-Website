@@ -1,0 +1,23 @@
+.welcome {
+  margin-top: 15%;
+  position: absolute;
+  width: 35%;
+  &__title {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      color: $second-color;
+    }
+  }
+  .bitcoin-animation {
+    position: absolute;
+    top: 0;
+    left: -2%;
+  }
+  .ethereum-animation {
+    position: absolute;
+    top: 0;
+    right: -2%;
+  }
+}

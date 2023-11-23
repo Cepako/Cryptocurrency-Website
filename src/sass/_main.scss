@@ -1,0 +1,18 @@
+body {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  width: 100vw;
+  min-height: 200vh;
+  overflow-x: hidden;
+  // background-image: url('./images/background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: local;
+  background-color: $main-color;
+  .welcome-page {
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+}
