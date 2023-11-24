@@ -1,5 +1,6 @@
 .welcome {
   margin-top: 15%;
+  margin-left: 5%;
   position: absolute;
   width: 35%;
   &__title {
@@ -14,10 +15,47 @@
     position: absolute;
     top: 0;
     left: -2%;
+    max-width: 50px;
+    max-height: 50px;
+    animation: upAndDown 3s infinite ease-in-out;
   }
   .ethereum-animation {
     position: absolute;
     top: 0;
     right: -2%;
+    max-width: 50px;
+    max-height: 50px;
+    animation: upAndDown 3s infinite ease-in-out;
+  }
+  @keyframes upAndDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+  &__coins {
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    .coin {
+      &__icon {
+        max-width: 65px;
+        max-height: 65px;
+      }
+      &__percent {
+        font-weight: 700;
+      }
+      &__price {
+        font-weight: 700;
+      }
+    }
   }
 }
