@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/9be3efa245.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div id="home" class="welcome-page">
@@ -64,7 +65,52 @@
         </div>
       </section>
     </div>
-    <div id="market" class="market"></div>
+    <div id="market" class="market">
+      <div class="market__wrapper">
+        <h1 class="market__wrapper__title">
+          Cryptocurrency Prices by Market Cap
+        </h1>
+        <table>
+          <tr>
+            <th>Coin</th>
+            <th>Price</th>
+            <th>1h</th>
+            <th>24h</th>
+            <th>7d</th>
+            <th>Market Cap</th>
+            <th>Last 7 Days</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="coin-wrapper">
+                <img src="./images/ethereum-eth.svg" alt="" />
+                <p>Bitcoin</p>
+              </div>
+            </td>
+            <td>$ 38000</td>
+            <td>1%</td>
+            <td>1.2%</td>
+            <td>-1%</td>
+            <td>$ 123,152,521</td>
+            <td><canvas id="myChart" width="135" height="50"></canvas></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="coin-wrapper">
+                <img src="./images/ethereum-eth.svg" alt="" />
+                <p>Bitcoin</p>
+              </div>
+            </td>
+            <td>$ 38000</td>
+            <td>1%</td>
+            <td>1.2%</td>
+            <td>-1%</td>
+            <td>$ 123,152,521</td>
+            <td><canvas id="myChart" width="135" height="50"></canvas></td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <div id="about-us" class="about-us"></div>
     <div id="choose-us" class="choose-us"></div>
   </body>
