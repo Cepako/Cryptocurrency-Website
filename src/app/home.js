@@ -9,10 +9,14 @@ async function getCoinsInfo() {
   const apiLink =
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=4&page=1&sparkline=false&locale=en&precision=2';
   const apiKey = '?api_key=CG-j1vfxzxeKiAR7yTq835R7CUt';
-  const response = await fetch(apiLink + apiKey);
-
-  const data = await response.json();
-  console.log(data);
+  let data;
+  try {
+    const response = await fetch(apiLink + apiKey);
+    data = await response.json();
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
   for (let i = 0; i < coinIcons.length; i++) {
     coinIcons[i].src = data[i].image;
     coinIcons[i].alt = data[i].name;
@@ -23,7 +27,7 @@ async function getCoinsInfo() {
       data[i].name
     } <span class="coin__percent" style="color:${
       percent < 0 ? 'red' : 'green'
-    }" >${percent}</span>`;
+    }" >${percent}%</span>`;
     coinPrices[i].textContent = `$ ${data[i].current_price.toFixed(2)}`;
   }
 }

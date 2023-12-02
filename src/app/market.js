@@ -32,7 +32,7 @@ function generateTable(data) {
     tdImg.appendChild(div);
     tr.appendChild(tdImg);
     const price = data[i].current_price.toString();
-    tdPrice.textContent = `$ ${price.length < 2 ? price + '.00' : price}`;
+    tdPrice.textContent = `$ ${price.length < 4 ? price + '.00' : price}`;
     tr.appendChild(tdPrice);
 
     const daysPercent =
