@@ -3,11 +3,21 @@ import { async } from 'regenerator-runtime';
 const apiUrl =
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=2',
   apiKey = '?api_key=CG-j1vfxzxeKiAR7yTq835R7CUt',
-  table = document.querySelector('table tbody');
+  table = document.querySelector('table');
+let data;
 
-function generateTable(data) {
-  console.log(data);
-  for (let i = 0; i < 20; i++) {
+function generateTable(data, index) {
+  table.innerHTML = ``;
+  table.innerHTML += `<tbody><tr>
+            <th>Coin</th>
+            <th>Price</th>
+            <th>1h</th>
+            <th>24h</th>
+            <th>7d</th>
+            <th>Market Cap</th>
+            <th>Last 7 Days</th>
+          </tr></tbody>`;
+  for (let i = index * 20; i < (index + 1) * 20; i++) {
     const tr = document.createElement('tr'),
       tdImg = document.createElement('td'),
       div = document.createElement('div'),
@@ -109,7 +119,6 @@ function generateTable(data) {
 }
 
 async function getMarketInfo() {
-  let data;
   try {
     const response = await fetch(apiUrl + apiKey);
     data = await response.json();
@@ -117,7 +126,21 @@ async function getMarketInfo() {
     console.log(err);
     throw err;
   }
-  generateTable(data);
+  generateTable(data, 0);
 }
 
 getMarketInfo();
+
+const pageButtons = document.querySelectorAll('.market__pages__page');
+
+pageButtons.forEach((button, i) => {
+  button.addEventListener('click', () => {
+    if (!button.classList.contains('chosen')) {
+      generateTable(data, i);
+      pageButtons.forEach((button) => {
+        button.classList.remove('chosen');
+      });
+      button.classList.add('chosen');
+    }
+  });
+});
