@@ -26,7 +26,7 @@ async function getCoinsInfo() {
     coinNames[i].innerHTML = `${
       data[i].name
     } <span class="coin__percent" style="color:${
-      percent < 0 ? 'red' : 'green'
+      percent < 0 ? 'red' : 'lightgreen'
     }" >${percent}%</span>`;
     coinPrices[i].textContent = `$ ${data[i].current_price.toFixed(2)}`;
   }
