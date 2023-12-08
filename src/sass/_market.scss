@@ -25,8 +25,8 @@
       }
       th {
         height: 70px;
-        color: $main-color;
-        background-color: $second-color;
+        color: white;
+        background-color: lighten($main-color, 30%);
       }
       td {
         height: 80px;
@@ -92,12 +92,12 @@
 
       &:hover {
         color: white;
-        background-color: darken(#541899, 10%);
+        background-color: lighten($main-color, 30%);
       }
     }
     .chosen {
       color: white;
-      background-color: darken(#541899, 10%);
+      background-color: lighten($main-color, 30%);
       -webkit-box-shadow: 0px 0px 8px white;
       -moz-box-shadow: 0px 0px 8px white;
       box-shadow: 0px 0px 8px white;

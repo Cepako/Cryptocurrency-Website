@@ -36,8 +36,9 @@
         margin-bottom: 10%;
         .icon {
           position: relative;
-          width: 40%;
-          height: 50%;
+          min-width: 20%;
+          max-width: 20%;
+          max-height: 35%;
           margin-right: 5%;
           background-color: lighten($main-color, 15%);
           border-radius: 5px;
