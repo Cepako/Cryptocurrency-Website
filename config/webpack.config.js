@@ -28,7 +28,23 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|svg|gif|jpeg)$/,
-        use: 'file-loader',
+        include: /images\/background/, // Uwzględnij tylko folder tła
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192, // Konwertuj obrazy mniejsze niż 8kb do formatu base64
+              name: '[name].[ext]',
+              outputPath: 'images',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true, // Wyłącz optymalizację w trybie deweloperskim
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,

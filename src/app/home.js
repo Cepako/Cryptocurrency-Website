@@ -1,5 +1,3 @@
-document.querySelector('body').style.backgroundImage =
-  'url(./images/background.png)';
 const coinIcons = document.querySelectorAll('.coin__icon'),
   coinNames = document.querySelectorAll('.coin__name'),
   coinPercents = document.querySelectorAll('.coin__percent'),
