@@ -36,7 +36,6 @@
           margin-right: 10%;
           background-color: lighten($main-color, 50%);
           border-radius: 15px;
-          transition: 0.3s linear;
           i {
             position: absolute;
             top: 50%;
@@ -61,6 +60,41 @@
       margin-right: 5%;
       img {
         height: 100%;
+      }
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    height: 100%;
+    width: 100%;
+    padding-top: 30%;
+    .title {
+      font-size: 4em;
+    }
+    .why-choose-us {
+      height: 100%;
+      margin-top: 7%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      &__section {
+        width: 100%;
+        .element {
+          padding: 5%;
+          width: 90%;
+          margin-left: 5%;
+
+          .icon {
+            max-height: 8vh;
+          }
+        }
+      }
+      &__img {
+        width: 100%;
+        margin-right: 5%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }
