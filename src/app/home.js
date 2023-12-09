@@ -30,3 +30,23 @@ async function getCoinsInfo() {
   }
 }
 getCoinsInfo();
+
+const burger = document.querySelector('.burger'),
+  xBtn = document.querySelector('.fa-x'),
+  menu = document.querySelector('.menu__list'),
+  menuButtons = document.querySelectorAll('.menu__list__item');
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+  xBtn.classList.add('active');
+});
+xBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+  xBtn.classList.remove('active');
+});
+
+menuButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    menu.classList.remove('active');
+    xBtn.classList.remove('active');
+  });
+});
