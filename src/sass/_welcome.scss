@@ -62,22 +62,22 @@
       }
     }
   }
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 800px) {
     margin-top: 25%;
     margin-left: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 50%;
     &__title {
-      font-size: 2.4em;
+      font-size: 3em;
     }
     .bitcoin-animation {
-      top: 15%;
-      left: -25%;
+      top: 10%;
+      left: -18%;
     }
     .ethereum-animation {
-      top: 15%;
-      right: -25%;
+      top: 10%;
+      right: -18%;
     }
     &__coins {
       margin-top: 7%;
@@ -90,6 +90,20 @@
           max-height: 65px;
         }
       }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    width: 60%;
+    &__title {
+      font-size: 2.4em;
+    }
+    .bitcoin-animation {
+      top: 15%;
+      left: -25%;
+    }
+    .ethereum-animation {
+      top: 15%;
+      right: -25%;
     }
   }
 }

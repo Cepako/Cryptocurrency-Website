@@ -63,10 +63,10 @@
       }
     }
   }
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 800px) {
     height: 100%;
     width: 100%;
-    padding-top: 30%;
+    padding-top: 15%;
     .title {
       font-size: 4em;
     }
@@ -84,7 +84,9 @@
           margin-left: 5%;
 
           .icon {
-            max-height: 8vh;
+            min-width: 15%;
+            max-width: 15%;
+            max-height: 7vh;
           }
         }
       }
@@ -94,6 +96,23 @@
         img {
           height: 100%;
           width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 25%;
+    .title {
+      font-size: 3.6em;
+    }
+    .why-choose-us {
+      &__section {
+        .element {
+          .icon {
+            min-width: 18%;
+            max-width: 18%;
+            max-height: 8vh;
+          }
         }
       }
     }

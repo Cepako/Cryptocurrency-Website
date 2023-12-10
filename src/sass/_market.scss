@@ -102,12 +102,12 @@
       box-shadow: 0px 0px 8px white;
     }
   }
-  @media only screen and (max-width: 360px) {
-    padding-top: 15%;
+  @media only screen and (max-width: 800px) {
+    padding-top: 10%;
     width: 100%;
     &__wrapper {
       margin: 0 auto;
-      width: 90%;
+      width: 95%;
       padding-top: 7%;
       &__title {
         font-size: 2em;
@@ -151,6 +151,12 @@
     &__pages {
       margin: 10% auto 5%;
       width: 95%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 15%;
+    &__wrapper {
+      width: 90%;
     }
   }
 }
