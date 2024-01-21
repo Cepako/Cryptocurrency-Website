@@ -27,7 +27,7 @@ Cryptocurrency-Website serves as the ideal tool for cryptocurrency enthusiasts, 
 
 ## Installation via NPM (Node Package Manager)
 
-To install and run the Memory Game using NPM, follow these steps:
+To install and run the Cryptocurrency-Website using NPM, follow these steps:
 
 Prerequisites
 
