@@ -1,10 +1,10 @@
 # Cryptocurrency-Website
 
-Description:
+### Description:
 
 Cryptocurrency-Website is a dynamic website that allows users to track the latest information about cryptocurrencies. Designed and implemented using HTML, SCSS, and JavaScript, the site offers users an intuitive interface to browse current prices and statistics related to various cryptocurrencies.
 
-Features:
+### Features:
 
 - Tracking Prices: A clear interface allows users to monitor real-time prices of different cryptocurrencies, presenting charts and price changes.
 
@@ -12,7 +12,7 @@ Features:
 
 - Responsive Design: Cryptocurrency-Website is designed to be responsive, meaning the site adapts to different devices, ensuring an optimal user experience on smartphones, tablets, and computers.
 
-Technologies:
+### Technologies:
 
 - HTML: Structure and layout of the site.
 - SCSS: Styling and enhanced style sheets.
@@ -25,7 +25,7 @@ Cryptocurrency-Website serves as the ideal tool for cryptocurrency enthusiasts, 
 
 ![image](https://github.com/Cepako/Cryptocurrency-Website/assets/131913675/354519ac-a104-43d4-a765-5430667a74a8)
 
-Installation via NPM (Node Package Manager)
+## Installation via NPM (Node Package Manager)
 
 To install and run the Memory Game using NPM, follow these steps:
 
@@ -67,7 +67,7 @@ To build the application for production, execute:
 - npm run prod
 This command will create a dist directory with optimized and minified code ready for deployment.
 
-Conclusion
+## Conclusion
 
 The application should now be running locally on your machine, and you can explore and interact with the Cryptocurrency-Website features.
 
