@@ -43,16 +43,16 @@
         }
       }
     }
-    .fa-x {
+  }
+  .fa-x {
       display: none;
-      z-index: 1;
+      z-index: 2;
       position: absolute;
       color: $main-color;
-      top: 5%;
-      right: 8%;
-      font-size: 0.7em;
+      top: 40%;
+      right: 12%;
+      font-size: 1.2em;
     }
-  }
   &__socials {
     font-size: 1.5em;
     padding-right: 5%;
@@ -129,13 +129,12 @@
       &.active {
         transform: translate(0);
       }
-      .fa-x.active {
+    }
+    .fa-x.active {
         display: block;
       }
-    }
     &__socials {
       margin-right: 20%;
-
       a {
         &:hover {
           color: white;

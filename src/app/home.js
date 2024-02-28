@@ -1,4 +1,4 @@
-const coinIcons = document.querySelectorAll('.coin__icon'),
+const coins = document.querySelectorAll('.coin'),
   coinNames = document.querySelectorAll('.coin__name'),
   coinPercents = document.querySelectorAll('.coin__percent'),
   coinPrices = document.querySelectorAll('.coin__price');
@@ -15,9 +15,12 @@ async function getCoinsInfo() {
     console.log(err);
     throw err;
   }
-  for (let i = 0; i < coinIcons.length; i++) {
-    coinIcons[i].src = data[i].image;
-    coinIcons[i].alt = data[i].name;
+  for (let i = 0; i < coins.length; i++) {
+    const coinIcon = document.createElement('img');
+    coinIcon.classList.add('coin__icon');
+    coinIcon.src = data[i].image;
+    coinIcon.alt = data[i].name;
+    coins[i].prepend(coinIcon);
 
     const percent = data[i].price_change_percentage_24h.toFixed(2);
 
